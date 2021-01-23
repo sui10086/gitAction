@@ -6,14 +6,6 @@ jobs:
     name: ssh-connect
     runs-on: ubuntu-latest
     steps:
-      - name: Public IP
-        id: ip
-        uses: haythem/public-ip@v1
-
-      - name: Print Public IP
-        run: |
-          echo ${{ steps.ip.outputs.ipv4 }}
-          echo ${{ steps.ip.outputs.ipv6 }}
       - name: Checkout Repo
         uses: actions/checkout@master
     
