@@ -1,0 +1,17 @@
+name: ssh-tmate连接
+on: push
+
+jobs:
+  ssh-connect:
+    name: ssh-connect
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+	  - name: Start SSH via tmate
+	    uses: P3TERX/ssh2actions@main
+
+      - name: long limit setting
+        run: |
+          date && touch /tmp/keepalive
