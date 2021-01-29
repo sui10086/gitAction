@@ -1,4 +1,4 @@
-name: ssh连接
+name: ssh-ngrok连接
 on: push
 
 jobs:
